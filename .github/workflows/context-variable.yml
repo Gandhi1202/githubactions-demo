@@ -1,0 +1,14 @@
+name: context-variable
+on:
+  workflow_dispatch:
+env:
+  key-text: AWS
+job:
+  text-context-variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking context variable
+      run: |
+        echo "${{ket-text}} git hub Repo name ${{github.repository}}"
+        echo " Git hub branch ${{github.branch}}"
+        echo " Git hub Work flow ${{github.workflow}}"

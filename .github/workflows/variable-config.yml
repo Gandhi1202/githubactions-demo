@@ -1,0 +1,23 @@
+name: variable
+
+env:
+  greeting: Hello
+on:
+  workflow_dispatch:
+    build: 
+      branches: [ "main"]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      emp-name: Gandhi
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: maven check
+        run : mvn -version
+      - name: project welcome
+        run: echo "${{env.greeting}} ${{env.emp-name}} you are assigning to ${{PROJECT_Name}} project"
+
+      

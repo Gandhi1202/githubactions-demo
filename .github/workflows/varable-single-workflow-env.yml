@@ -10,7 +10,11 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+  env:
+    insidejob: check the job
     steps: 
+      env: 
+        insideenv: check the steps
       - uses: actions/checkout@v4
 
       - name: maven version check
@@ -18,3 +22,8 @@ jobs:
 
       - name: check master env
         run : echo " Hello Mr. ${{env.key}} ."
+
+      - name: check the jobs env
+        run: echo " Jobs ${{env.insidejob}} ."
+      - name: check the steps
+        run : echo "steps ${{env.insideenv}} ."

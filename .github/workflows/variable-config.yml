@@ -4,8 +4,8 @@ env:
   greeting: Hello
 on:
   workflow_dispatch:
-    build: 
-      branches: [ "main"]
+  push: 
+    branches: [ "main"]
     
 jobs:
   build:

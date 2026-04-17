@@ -4,6 +4,8 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
+env:
+  key: gandhi
 
 jobs:
   build:
@@ -13,3 +15,6 @@ jobs:
 
       - name: maven version check
         run : mvn -verison
+
+      - name: check master env
+       run : Hello ${key} .

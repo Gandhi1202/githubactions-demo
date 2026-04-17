@@ -17,4 +17,4 @@ jobs:
         run : mvn -verison
 
       - name: check master env
-       run : Hello ${key} .
+        run : Hello ${key} .

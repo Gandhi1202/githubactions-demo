@@ -1,1 +1,15 @@
+name: env single workflow
 
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+job:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+
+      - name: maven version check
+        run : mvn -verison

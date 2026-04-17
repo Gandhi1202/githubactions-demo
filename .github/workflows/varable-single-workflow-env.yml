@@ -17,4 +17,4 @@ jobs:
         run : mvn -version
 
       - name: check master env
-        run : Hello ${{env.key}} .
+        run : echo " Hello Mr. ${{env.key}} ."

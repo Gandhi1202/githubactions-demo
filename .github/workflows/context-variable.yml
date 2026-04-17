@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: checking context variable
         run: |
-        echo "${{env.key-text}} git hub Repo name ${{github.repository}}"
-        echo " Git hub branch ${{github.ref_name}}"
-        echo " Git hub Work flow ${{github.workflow}}"
+          echo "${{env.key-text}} git hub Repo name ${{github.repository}}"
+          echo " Git hub branch ${{github.ref_name}}"
+          echo " Git hub Work flow ${{github.workflow}}"

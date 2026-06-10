@@ -33,5 +33,5 @@ jobs:
         env:
           FullName: Barnana Gandhi
 
-        # Execute shell command
+        # Execute shell command PROJECT_NAME set on the settings-> secrate-> actions
         run: echo "$Greeting $FullName Deploy ${{ vars.PROJECT_NAME }} on the $Cloud platform"

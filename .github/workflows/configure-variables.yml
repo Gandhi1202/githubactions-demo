@@ -1,0 +1,15 @@
+name: varibales
+env:
+  Cloud: AWS
+on: 
+  workflow_dispatch
+jobs:
+  greeting_job:
+    runs-on: ubuntu-slim
+    env:
+      Greeting : Hello
+    steps:
+      - name: "Say Hello to Gandhi"
+        env:
+          FullName: Barnana Gandhi
+        run: echo "$Greeting $FullName Deploy ${{vars.PROJECT_NAME}} on the $Cloud platform"

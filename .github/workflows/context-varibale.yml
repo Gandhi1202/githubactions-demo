@@ -15,5 +15,6 @@ jobs:
         echo "Repository ${{github.repository}}"
         echo "super env $${{env.surname}}"
         echo "Actor ${{github.actor}}"
+        echo "Hello"
     
   

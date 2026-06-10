@@ -10,10 +10,10 @@ jobs:
     env:
       fname: Gandhi
     steps:
-      - name: Conext variable
+    - name: Context variable
       run: |
         echo "Repository ${{github.repository}}"
-        echo "super env $${{env.surname}}"
+        echo "super env ${{env.surname}}"
         echo "Actor ${{github.actor}}"
         echo "Hello"
     

@@ -1,15 +1,37 @@
-name: varibales
+# Workflow name displayed in GitHub Actions
+name: variables
+
+# Global environment variables (available to all jobs and steps)
 env:
   Cloud: AWS
-on: 
-  workflow_dispatch
+
+# Event that triggers the workflow
+on:
+  workflow_dispatch:
+
+# Collection of jobs
 jobs:
+
+  # First job name
   greeting_job:
-    runs-on: ubuntu-slim
+
+    # Runner machine on which the job executes
+    runs-on: ubuntu-latest
+
+    # Job-level environment variable
     env:
-      Greeting : Hello
+      Greeting: Hello
+
+    # Steps executed sequentially
     steps:
-      - name: "Say Hello to Gandhi"
+
+      # Step name displayed in Actions UI
+      - name: Say Hello to Gandhi
+
+        # Step-level environment variable
+        # Available only within this step
         env:
           FullName: Barnana Gandhi
-        run: echo "$Greeting $FullName Deploy ${{vars.PROJECT_NAME}} on the $Cloud platform"
+
+        # Execute shell command
+        run: echo "$Greeting $FullName Deploy ${{ vars.PROJECT_NAME }} on the $Cloud platform"

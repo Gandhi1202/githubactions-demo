@@ -1,0 +1,20 @@
+name: Input variable
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        description: "Enter user name"
+        default: "Gandhi"
+        required: true
+      environment:
+        description: "Enter Second Number"
+        default: "dev"
+        required: true
+jobs:
+  add_number:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display User inputs
+        run: |
+          echo "username ${{inputs.username}}"
+          echo "Environment ${{inputs.environment}}

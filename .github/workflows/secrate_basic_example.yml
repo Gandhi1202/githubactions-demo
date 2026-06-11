@@ -1,0 +1,11 @@
+name: Secrate
+on:
+  workflow_dispatch:
+jobs:
+  secrate_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Secrate key access
+        run: |
+          echo "Check Secrate ${{secrets.GITHUB_TOKEN}}"
+          echo "Check Secare in setting ${{ secrets.}}"

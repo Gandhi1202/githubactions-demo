@@ -11,10 +11,10 @@ on:
         default: "dev"
         required: true
 jobs:
-  add_number:
+  enter_names:
     runs-on: ubuntu-latest
     steps:
       - name: Display User inputs
         run: |
           echo "username ${{inputs.username}}"
-          echo "Environment ${{inputs.environment}}
+          echo "Environment ${{inputs.environment}}"

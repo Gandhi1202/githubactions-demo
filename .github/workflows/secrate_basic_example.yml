@@ -8,4 +8,4 @@ jobs:
       - name: Secrate key access
         run: |
           echo "Check Secrate ${{secrets.GITHUB_TOKEN}}"
-          echo "Check Secare in setting ${{ secrets.}}"
+          echo "Check Secare in setting ${{ secrets.DEV_URL_PRACT}}"

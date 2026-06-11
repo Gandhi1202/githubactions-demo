@@ -1,0 +1,24 @@
+name: Example of real time devops input and dropdown
+on:
+  workflow_dispatch: 
+    inputs:
+      app_version:
+        description: "Application version"
+        required: true
+      environment:
+       description: "Select the deploy Envirmonet"
+       required: true
+       type: choice
+       options:
+         - dev
+         - qa
+         - prod
+jobs:
+  realtime_example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enter and select the application details
+        run: |
+          echo "Enter the application version ${{inputs.app_version}}"
+          echo "Select the option for environemt ${{inputs.environment}}"
+        

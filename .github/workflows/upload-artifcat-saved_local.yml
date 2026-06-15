@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Create file
         run: |
-          echo " Hello artifact demo  download the file" >> EFO
+          echo " Hello artifact demo  download the file" >> EFO.txt
           echo " File created successfully"
     
       - name: Upload Artifact

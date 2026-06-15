@@ -1,0 +1,8 @@
+name: use Upload artifact 
+on:
+  push:
+
+jobs:
+  build_artifact:
+    runs-on: ubuntu-latest
+

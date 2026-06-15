@@ -17,4 +17,4 @@ jobs:
       - name: "check the build"
         run: |
           echo "mvn test"
-          echo "checking completed
+          echo "checking completed"

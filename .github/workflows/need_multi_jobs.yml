@@ -1,0 +1,20 @@
+name: Need for build and test multi jobs
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the need fo test and build
+        run: |
+          echo "mvn clean package"
+          echo "npm run build"
+          echo "Packages test"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: "check the build"
+        run: |
+          echo "mvn test"
+          echo "checking completed
